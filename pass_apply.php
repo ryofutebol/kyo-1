@@ -5,7 +5,7 @@ $dotenv->load();
 $username = getenv('DB_USERNAME');
 $password = getenv('DB_PASSWORD');
 session_start();
-$dsn = "mysql:host=localhost; dbname=kyoichi; charset=utf8";
+$dsn = "mysql:host=localhost; dbname=test_db; charset=utf8";
 if (isset($_POST['reset'])) {
         if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {//メールアドレスかのチェック
                 $msg = '再発行URLを送信しました';

@@ -5,7 +5,7 @@ $dotenv->load();
 $username = getenv('DB_USERNAME');
 $password = getenv('DB_PASSWORD');
 session_start();
-$dsn = "mysql:host=localhost; dbname=kyoichi; charset=utf8";
+$dsn = "mysql:host=localhost; dbname=test_db; charset=utf8";
 $mail = $_GET['mail'];
 try {
         $dbh = new PDO($dsn, $username, $password);

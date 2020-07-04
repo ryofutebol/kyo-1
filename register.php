@@ -7,7 +7,7 @@ $password = getenv('DB_PASSWORD');
 $name = $_POST['name'];
 $mail = $_POST['mail'];
 $pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
-$dsn = "mysql:host=localhost; dbname=kyoichi; charset=utf8";
+$dsn = "mysql:host=localhost; dbname=test_db; charset=utf8";
 try {
         $dbh = new PDO($dsn, $username, $password);
 } catch (PDOException $e) {

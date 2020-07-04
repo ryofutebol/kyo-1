@@ -5,7 +5,7 @@ $dotenv->load();
 $username = getenv('DB_USERNAME');
 $password = getenv('DB_PASSWORD');
 session_start();
-$dsn = "mysql:host=localhost; dbname=kyoichi; charset=utf8";
+$dsn = "mysql:host=localhost; dbname=tst_db; charset=utf8";
 date_default_timezone_set('Asia/Tokyo');
 try {
         $dbh = new PDO($dsn, $username, $password);
