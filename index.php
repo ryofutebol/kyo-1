@@ -114,7 +114,7 @@ $result = $stmt->fetchAll();
                                         <a href="delete.php?post_id=<?php echo $value['id']; ?>" class="btn btn-primary btn-sm">削除</a>
                                 <?php endif; ?>
                         </td>
-                        <td><?php echo $value['content']; ?></td>
+                        <td><?php echo nl2br($value['content']); ?></td>
                         <td><?php echo $value['created_at']; ?></td>
                 </tr>
         <?php endforeach; ?>

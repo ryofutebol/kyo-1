@@ -18,9 +18,9 @@ $stmt->execute();
 $user = $stmt->fetch();
 if (isset($_POST['upload_btn'])) {
         $edit_comment = $_POST['comment'];
-        $image = $user['image_name'];//データベースに元々入っている値
+        $image = $user['image_name'];//データベースに元々入っているファイル名
         $img_name = uniqid(mt_rand());//ファイル名をユニーク化
-        $img_name .= '.' . substr(strrchr($_FILES['image']['name'], '.'), 1);//アップロードされたファイルの拡張子>を取得
+        $img_name .= '.' . substr(strrchr($_FILES['image']['name'], '.'), 1);//アップロードされたファイルの拡張子を取得
         $file = "images/$img_name";
         $error = '';
         if (!empty($_FILES['image']['name'])) {//ファイルが選択されていれば$imageにファイル名を代入
